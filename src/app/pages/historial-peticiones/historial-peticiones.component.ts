@@ -3,9 +3,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
-import { PeticioneServicesService } from 'src/app/services/peticione-services.service';
-import { Peticiones } from 'src/app/Interfaces/peticiones';
-import { Empleado } from 'src/app/Interfaces/empleado';
+import { PeticioneServicesService } from '../../services/peticione-services.service';
+import { Peticiones } from '../../Interfaces/peticiones';
+import { Empleado } from '../../Interfaces/empleado';
 import { Observable, Subject  } from 'rxjs';
 import { map } from 'rxjs/operators';
 

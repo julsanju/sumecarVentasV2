@@ -14,14 +14,17 @@ import { Login } from '../../Interfaces/login';
 import { MensajeError } from '../../Interfaces/mensaje-error';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import {SharedServicesService} from '../../services/shared-services.service';
-import { Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { LockOutline } from '@ant-design/icons-angular/icons'; // Importa el ícono de candado
 import Swal from 'sweetalert2';
-
+import '@dotlottie/player-component'; 
+import { ModuloLottifilesModule } from '../../modules/modulo-lottifiles.module';
 
 @Component({
   selector: 'app-prueba-login',
+  standalone: true,
+  imports: [ModuloLottifilesModule,RouterOutlet],
   templateUrl: './prueba-login.component.html',
   styleUrls: ['./prueba-login.component.css'],
   animations: [

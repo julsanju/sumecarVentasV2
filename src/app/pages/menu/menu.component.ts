@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd, ActivatedRouteSnapshot, UrlSegment   } from '@angular/router';
+import { Router, NavigationEnd, ActivatedRouteSnapshot, UrlSegment, RouterOutlet   } from '@angular/router';
 //import { json } from 'node:stream/consumers';
-import { LoginServicesService } from 'src/app/services/login-services.service';
+import { LoginServicesService } from '../../services/login-services.service';
+import { ModuloZorroModule } from '../../modules/modulo-zorro.module';
 
 @Component({
   selector: 'app-menu',
+  standalone: true,
+  imports : [ModuloZorroModule,RouterOutlet],
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })

@@ -7,6 +7,8 @@ import { MatSort } from '@angular/material/sort';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
 import { DataProductsService } from '../../services/data-products.service';
 import { DialogOverviewComponent } from '../dialog-overview/dialog-overview.component';
+import { ModuloAngularMaterialModule } from '../../modules/modulo-angular-material.module';
+import { RouterOutlet } from '@angular/router';
 declare var Grid: any;
 //import { DialogData } from 'src/app/Interfaces/dialog-data';
 
@@ -15,6 +17,8 @@ export interface DialogData{
 }
 @Component({
   selector: 'app-productos',
+  standalone: true,
+  imports : [ModuloAngularMaterialModule, RouterOutlet],
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
   

@@ -11,10 +11,13 @@ import autoTable from 'jspdf-autotable';
 import { PdfInterface } from '../../Interfaces/pdf-interface';
 import Swal from 'sweetalert2';
 import { MensajeError } from '../../Interfaces/mensaje-error';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { ModuloAngularMaterialModule } from '../../modules/modulo-angular-material.module';
 
 @Component({
   selector: 'app-visualizar-productos',
+  standalone: true,
+  imports : [ModuloAngularMaterialModule, RouterModule],
   templateUrl: './visualizar-productos.component.html',
   styleUrls: ['./visualizar-productos.component.css']
 })

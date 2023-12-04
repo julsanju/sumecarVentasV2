@@ -4,12 +4,16 @@ import { SharedServicesService } from '../../services/shared-services.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalMessageComponent } from '../modal-message/modal-message.component';
 import { MensajeError } from '../../Interfaces/mensaje-error';
-import { Login } from 'src/app/Interfaces/login';
-import { LoginServicesService } from 'src/app/services/login-services.service';
+import { Login } from '../../Interfaces/login';
+import { LoginServicesService } from '../../services/login-services.service';
 import { MatStepper } from '@angular/material/stepper';
-import { Contrasena } from 'src/app/Interfaces/contrasena';
+import { Contrasena } from '../../Interfaces/contrasena';
+import { RouterOutlet } from '@angular/router';
+import { ModuloAngularMaterialModule } from '../../modules/modulo-angular-material.module';
 @Component({
   selector: 'app-cambiar-contrasena',
+  standalone: true,
+  imports: [ModuloAngularMaterialModule,RouterOutlet],
   templateUrl: './cambiar-contrasena.component.html',
   styleUrls: ['./cambiar-contrasena.component.css']
 })

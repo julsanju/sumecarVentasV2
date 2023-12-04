@@ -1,14 +1,18 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Productos } from 'src/app/Interfaces/productos';
+import { Productos } from '../../Interfaces/productos';
 import {NgIf} from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ModuloAngularMaterialModule } from '../../modules/modulo-angular-material.module';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-dialog-overview',
+  standalone: true,
+  imports : [ModuloAngularMaterialModule, RouterOutlet],
   templateUrl: './dialog-overview.component.html',
   styleUrls: ['./dialog-overview.component.css']
 })

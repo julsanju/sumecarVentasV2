@@ -1,13 +1,13 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ProductsServicesService } from 'src/app/services/products-services.service';
-import { Productos } from 'src/app/Interfaces/productos';
-import { Empleado } from 'src/app/Interfaces/empleado';
+import { ProductsServicesService } from '../../services/products-services.service';
+import { Productos } from '../../Interfaces/productos';
+import { Empleado } from '../../Interfaces/empleado';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import Swal from 'sweetalert2';
-import { MensajeError } from 'src/app/Interfaces/mensaje-error';
+import { MensajeError } from '../../Interfaces/mensaje-error';
 import { Router } from '@angular/router';
-import { PeticioneServicesService } from 'src/app/services/peticione-services.service';
+import { PeticioneServicesService } from '../../services/peticione-services.service';
 import { MatTableDataSource } from '@angular/material/table'; // Importa MatTableDataSource
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';

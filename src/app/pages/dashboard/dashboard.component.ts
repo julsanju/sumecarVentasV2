@@ -5,7 +5,7 @@ import { DashboardServicesService } from '../../services/dashboard-services.serv
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css', '../../../app/assets/css/sb-admin-2.min.css', '../../assets/vendor/fontawesome-free/css/all.min.css']
+  styleUrls: ['./dashboard.component.css']
 })
 
 
