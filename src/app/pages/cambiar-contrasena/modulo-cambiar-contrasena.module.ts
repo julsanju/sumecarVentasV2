@@ -13,11 +13,13 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
-  declarations: [
-  ],
+  declarations: [],
   imports: [
+    ReactiveFormsModule,
     CommonModule,
     MatPaginatorModule,
     MatTableModule,
@@ -32,10 +34,6 @@ import {MatCardModule} from '@angular/material/card';
     MatDialogModule,
     MatGridListModule,
     MatCardModule
-  ],
-  exports: [
-    
-  ],
-  
+  ]
 })
-export class ModuloVisualizarProductosModule { }
+export class ModuloCambiarContrasenaModule { }

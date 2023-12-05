@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd, ActivatedRouteSnapshot, UrlSegment, RouterOutlet   } from '@angular/router';
+import { Router, NavigationEnd, ActivatedRouteSnapshot, UrlSegment, RouterModule   } from '@angular/router';
 //import { json } from 'node:stream/consumers';
 import { LoginServicesService } from '../../services/login-services.service';
-import { ModuloZorroModule } from '../../modules/modulo-zorro.module';
+import { ModuloMenuModule } from './modulo-menu.module';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports : [ModuloZorroModule,RouterOutlet],
+  imports : [ RouterModule, ModuloMenuModule,],
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })

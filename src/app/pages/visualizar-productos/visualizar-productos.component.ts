@@ -13,11 +13,12 @@ import Swal from 'sweetalert2';
 import { MensajeError } from '../../Interfaces/mensaje-error';
 import { Router, RouterModule } from '@angular/router';
 import { ModuloAngularMaterialModule } from '../../modules/modulo-angular-material.module';
+import { ModuloVisualizarProductosModule } from './modulo-visualizar-productos.module';
 
 @Component({
   selector: 'app-visualizar-productos',
   standalone: true,
-  imports : [ModuloAngularMaterialModule, RouterModule],
+  imports : [ModuloVisualizarProductosModule, RouterModule],
   templateUrl: './visualizar-productos.component.html',
   styleUrls: ['./visualizar-productos.component.css']
 })

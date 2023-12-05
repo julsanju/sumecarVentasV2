@@ -15,15 +15,14 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 //componentes
-import { VisualizarProductosComponent } from '../pages/visualizar-productos/visualizar-productos.component';
-import { ProductosComponent } from '../pages/productos/productos.component';
-import { DialogOverviewComponent } from '../pages/dialog-overview/dialog-overview.component';
+//import { VisualizarProductosComponent } from '../pages/visualizar-productos/visualizar-productos.component';
+//import { ProductosComponent } from '../pages/productos/productos.component';
+//import { DialogOverviewComponent } from '../pages/dialog-overview/dialog-overview.component';
+import {VisualizarProductosComponent, ProductosComponent, DialogOverviewComponent} from '../pages/index'
 
 @NgModule({
   declarations: [
-    VisualizarProductosComponent,
-    ProductosComponent,
-    DialogOverviewComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -42,9 +41,7 @@ import { DialogOverviewComponent } from '../pages/dialog-overview/dialog-overvie
     MatCardModule
   ],
   exports: [
-    VisualizarProductosComponent,
-    ProductosComponent,
-    DialogOverviewComponent,
+    
   ]
 })
 export class ModuloAngularMaterialModule { }

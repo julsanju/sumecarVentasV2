@@ -18,13 +18,15 @@ import { Router, RouterOutlet } from '@angular/router';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { LockOutline } from '@ant-design/icons-angular/icons'; // Importa el ícono de candado
 import Swal from 'sweetalert2';
-import '@dotlottie/player-component'; 
-import { ModuloLottifilesModule } from '../../modules/modulo-lottifiles.module';
+import '@dotlottie/player-component';
+import { ModuloZorroModule } from '../../modules/modulo-zorro.module';
+import { ModuloLoginModule } from './modulo-login.module';
+import { ModuloAngularMaterialModule } from '../../modules/modulo-angular-material.module';
 
 @Component({
   selector: 'app-prueba-login',
   standalone: true,
-  imports: [ModuloLottifilesModule,RouterOutlet],
+  imports: [ModuloLoginModule,RouterOutlet],
   templateUrl: './prueba-login.component.html',
   styleUrls: ['./prueba-login.component.css'],
   animations: [
