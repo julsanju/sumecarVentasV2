@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild, AfterViewInit, NgModule } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataProductsService } from '../../services/data-products.service';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Productos } from '../../Interfaces/productos';
@@ -12,14 +12,37 @@ import { PdfInterface } from '../../Interfaces/pdf-interface';
 import Swal from 'sweetalert2';
 import { MensajeError } from '../../Interfaces/mensaje-error';
 import { Router, RouterModule } from '@angular/router';
-import { ModuloAngularMaterialModule } from '../../modules/modulo-angular-material.module';
+import { MatTableModule } from '@angular/material/table';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSortModule } from '@angular/material/sort';
+import {MatInputModule} from '@angular/material/input';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 import { ModuloVisualizarProductosModule } from './modulo-visualizar-productos.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-visualizar-productos',
   standalone: true,
-  imports : [ModuloVisualizarProductosModule, RouterModule],
-  templateUrl: './visualizar-productos.component.html',
+  imports : [ReactiveFormsModule,MatPaginatorModule, MatTableModule,
+    MatProgressBarModule,
+    MatStepperModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatSortModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatDialogModule,
+    MatGridListModule,
+    MatCardModule, FormsModule],
+  templateUrl:  './visualizar-productos.component.html',
   styleUrls: ['./visualizar-productos.component.css']
 })
 

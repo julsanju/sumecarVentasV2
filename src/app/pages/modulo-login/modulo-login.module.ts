@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//modulos angular material
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -14,10 +16,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 
+
 @NgModule({
-  declarations: [
-  ],
+  declarations: [],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     MatPaginatorModule,
     MatTableModule,
@@ -32,10 +36,6 @@ import {MatCardModule} from '@angular/material/card';
     MatDialogModule,
     MatGridListModule,
     MatCardModule
-  ],
-  exports: [
-    
-  ],
-  
+  ]
 })
-export class ModuloVisualizarProductosModule { }
+export class ModuloLoginModule { }

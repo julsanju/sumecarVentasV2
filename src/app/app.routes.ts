@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { PruebaLoginComponent } from './pages/prueba-login/prueba-login.component';
+import { PruebaLoginComponent } from './pages/modulo-login/prueba-login.component';
 import { RegisterSalesComponent } from './pages/register-sales/register-sales.component';
 import { CambiarContrasenaComponent } from './pages/cambiar-contrasena/cambiar-contrasena.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ProductosComponent } from './pages/productos/productos.component';
-import { VisualizarProductosComponent } from './pages/visualizar-productos/visualizar-productos.component';
+import { ProductosComponent } from './pages/modulo-productos/productos.component';
+import { VisualizarProductosComponent } from './pages/modulo-visualizar-productos/visualizar-productos.component';
 import { ConfirmedProductsComponent } from './pages/confirmed-products/confirmed-products.component';
 import { FinishedProductsComponent } from './pages/finished-products/finished-products.component';
 import { AddInformationComponent } from './pages/add-information/add-information.component';

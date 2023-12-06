@@ -1,14 +1,26 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ProductsServicesService } from '../../services/products-services.service';
 import { Productos } from '../../Interfaces/productos';
-import { MatTableDataSource } from '@angular/material/table'; // Importa MatTableDataSource
-import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table'; // Importa MatTableDataSource
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
 import { DataProductsService } from '../../services/data-products.service';
 import { DialogOverviewComponent } from '../dialog-overview/dialog-overview.component';
 import { ModuloAngularMaterialModule } from '../../modules/modulo-angular-material.module';
 import { RouterOutlet } from '@angular/router';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSortModule } from '@angular/material/sort';
+import {MatInputModule} from '@angular/material/input';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import { NzInputModule } from 'ng-zorro-antd/input';
+
 declare var Grid: any;
 //import { DialogData } from 'src/app/Interfaces/dialog-data';
 
@@ -18,7 +30,18 @@ export interface DialogData{
 @Component({
   selector: 'app-productos',
   standalone: true,
-  imports : [ModuloAngularMaterialModule, RouterOutlet],
+  imports : [MatPaginatorModule, MatTableModule,
+    MatProgressBarModule,
+    MatStepperModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatSortModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatDialogModule,
+    MatGridListModule,
+    MatCardModule,NzInputModule,RouterOutlet],
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
   

@@ -8,7 +8,7 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzInputModule } from 'ng-zorro-antd/input'
-import { PruebaLoginComponent } from '../pages/prueba-login/prueba-login.component';
+import { PruebaLoginComponent } from '../pages/modulo-login/prueba-login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({

@@ -1,5 +1,5 @@
 import { Component, Renderer2, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { SharedServicesService } from '../../services/shared-services.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalMessageComponent } from '../modal-message/modal-message.component';
@@ -9,11 +9,39 @@ import { LoginServicesService } from '../../services/login-services.service';
 import { MatStepper } from '@angular/material/stepper';
 import { Contrasena } from '../../Interfaces/contrasena';
 import { RouterOutlet } from '@angular/router';
-import { ModuloAngularMaterialModule } from '../../modules/modulo-angular-material.module';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSortModule } from '@angular/material/sort';
+import {MatInputModule} from '@angular/material/input';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-cambiar-contrasena',
   standalone: true,
-  imports: [ModuloAngularMaterialModule,RouterOutlet],
+  imports: [MatPaginatorModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatTableModule,
+    MatProgressBarModule,
+    MatStepperModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatSortModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatDialogModule,
+    MatGridListModule,
+    MatCardModule,RouterOutlet],
   templateUrl: './cambiar-contrasena.component.html',
   styleUrls: ['./cambiar-contrasena.component.css']
 })
