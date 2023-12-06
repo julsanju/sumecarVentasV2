@@ -15,7 +15,8 @@ import { HistorialPeticionesComponent } from './pages/historial-peticiones/histo
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: '/prueba-login', // Redirige a la página de inicio de sesión
+        component : PruebaLoginComponent,
+        //redirectTo: '/prueba-login', // Redirige a la página de inicio de sesión
         pathMatch: 'full',
       },
       {
