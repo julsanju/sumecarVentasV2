@@ -46,7 +46,7 @@ export interface DialogData{
   styleUrls: ['./productos.component.css']
   
 })
-export class ProductosComponent implements OnInit {
+export default class ProductosComponent implements OnInit {
   cantidad:number = 0
   panelOpenState = false;
   @ViewChild('gridContainer') gridContainer!: ElementRef;

@@ -6,7 +6,7 @@ import { Login } from '../Interfaces/login';
 import { MensajeError } from '../Interfaces/mensaje-error';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'any'
 })
 export class ValidationService {
   

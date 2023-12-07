@@ -18,7 +18,6 @@ import {MatCardModule} from '@angular/material/card';
 //import { VisualizarProductosComponent } from '../pages/visualizar-productos/visualizar-productos.component';
 //import { ProductosComponent } from '../pages/productos/productos.component';
 //import { DialogOverviewComponent } from '../pages/dialog-overview/dialog-overview.component';
-import {VisualizarProductosComponent, ProductosComponent, DialogOverviewComponent} from '../pages/index'
 
 @NgModule({
   declarations: [

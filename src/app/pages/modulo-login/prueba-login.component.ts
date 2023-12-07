@@ -1,6 +1,5 @@
 
 import { Component, AfterViewInit } from '@angular/core';
-import { CommonModule  } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
@@ -13,14 +12,13 @@ import { trigger, transition, style, animate } from '@angular/animations';
 import { LoginServicesService } from '../../services/login-services.service';
 import { Login } from '../../Interfaces/login';
 import { MensajeError } from '../../Interfaces/mensaje-error';
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl, ReactiveFormsModule } from '@angular/forms';
 import {SharedServicesService} from '../../services/shared-services.service';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { LockOutline } from '@ant-design/icons-angular/icons'; // Importa el ícono de candado
 import Swal from 'sweetalert2';
 import { ModuloLoginModule } from '../prueba-login/modulo-login/modulo-login.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //modulos angular material
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
@@ -32,14 +30,15 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { routes } from '../../app.routes';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-prueba-login',
   standalone: true,
   imports: [ReactiveFormsModule,
+    CommonModule,
     RouterModule,
     HttpClientModule,
-    CommonModule,
     MatPaginatorModule,
     MatTableModule,
     MatProgressBarModule,
@@ -68,7 +67,7 @@ import { routes } from '../../app.routes';
   ],
   
 })
-export class PruebaLoginComponent {
+export default class PruebaLoginComponent {
 
   users = [
     {value: 'cliente', viewValue: 'Cliente'},

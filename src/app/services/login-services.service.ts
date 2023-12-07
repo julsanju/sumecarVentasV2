@@ -8,7 +8,7 @@ import { Contrasena } from '../Interfaces/contrasena';
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'any'
 })
 export class LoginServicesService {
   private apiUrl = 'http://localhost:5171/api/login/iniciar_sesion';

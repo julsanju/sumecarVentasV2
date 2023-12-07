@@ -8,7 +8,7 @@ import { Login } from '../../Interfaces/login';
 import { LoginServicesService } from '../../services/login-services.service';
 import { MatStepper } from '@angular/material/stepper';
 import { Contrasena } from '../../Interfaces/contrasena';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -23,11 +23,15 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-cambiar-contrasena',
   standalone: true,
-  imports: [MatPaginatorModule,
+  imports: [
+    RouterModule,
+    CommonModule,
+    MatPaginatorModule,
     ReactiveFormsModule,
     FormsModule,
     MatTableModule,
@@ -45,7 +49,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   templateUrl: './cambiar-contrasena.component.html',
   styleUrls: ['./cambiar-contrasena.component.css']
 })
-export class CambiarContrasenaComponent {
+export default class CambiarContrasenaComponent {
   username = '';
   isEditable = false;
   errorMessage: MensajeError | null = null;

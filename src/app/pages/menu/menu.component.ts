@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Router, NavigationEnd, ActivatedRouteSnapshot, UrlSegment, RouterModule   } from '@angular/router';
+import { Router, NavigationEnd, ActivatedRouteSnapshot, UrlSegment, RouterModule, RouterOutlet   } from '@angular/router';
 //import { json } from 'node:stream/consumers';
 import { LoginServicesService } from '../../services/login-services.service';
 import { ModuloMenuModule } from './modulo-menu.module';
@@ -16,7 +15,7 @@ import { NzInputModule } from 'ng-zorro-antd/input'
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports : [ RouterModule, ModuloMenuModule,CommonModule,
+  imports : [ RouterModule, ModuloMenuModule,
     NzLayoutModule,
     NzMenuModule,
     NzBreadCrumbModule,
@@ -26,7 +25,7 @@ import { NzInputModule } from 'ng-zorro-antd/input'
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent {
+export default class MenuComponent {
   isCollapsed = false;
   isAdmin = false;
   isEmpleado = false;
