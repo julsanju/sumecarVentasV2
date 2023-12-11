@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRouteSnapshot, UrlSegment, RouterModule, RouterOutlet   } from '@angular/router';
 //import { json } from 'node:stream/consumers';
 import { LoginServicesService } from '../../services/login-services.service';
@@ -12,6 +12,7 @@ import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzInputModule } from 'ng-zorro-antd/input'
 import { HttpClientModule } from '@angular/common/http';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-menu',
@@ -33,9 +34,10 @@ export default class MenuComponent {
   isCliente = false;
   username: string = '';
   rol: string = '';
-  constructor(private login: LoginServicesService, private router: Router) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private login: LoginServicesService, private router: Router) {}
   breadcrumbs: string[] = [];
   ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
     // Recupera la información del usuario desde localStorage
     const userDataString = localStorage.getItem('userData');
     if (userDataString) {
@@ -51,16 +53,18 @@ export default class MenuComponent {
         console.error('Error al analizar JSON:', error);
       }
     }
-
+  }
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.breadcrumbs = this.createBreadcrumbs(this.router.routerState.snapshot.root); // Usa routerState.snapshot.root
       }
     });
+  
   }
 
   
   esAdmin(): boolean {
+    if (isPlatformBrowser(this.platformId)) {
     // Recupera la información del usuario desde localStorage
     const userDataString = localStorage.getItem('userData');
     if (userDataString) {
@@ -74,10 +78,12 @@ export default class MenuComponent {
         return false;
       }
     }
+  }
     return false; // Retorna false si no se encuentra información del usuario
   }
 
   esEmpleado(): boolean{
+    if (isPlatformBrowser(this.platformId)) {
     const userDataString = localStorage.getItem('userData');
     if (userDataString) {
       try{
@@ -88,11 +94,13 @@ export default class MenuComponent {
         return false;
       }
     }
+  }
     return false;
 
   }
 
   esCliente(): boolean{
+    if (isPlatformBrowser(this.platformId)) {
     const userDataString = localStorage.getItem('userData');
     if (userDataString) {
       try{
@@ -103,6 +111,7 @@ export default class MenuComponent {
         return false;
       }
     }
+  }
     return false;
   }
   

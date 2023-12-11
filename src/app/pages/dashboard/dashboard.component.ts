@@ -3,12 +3,12 @@ import { Dashboard } from '../../Interfaces/dashboard';
 import { DashboardServicesService } from '../../services/dashboard-services.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [HttpClientModule, CommonModule,RouterModule],
+  imports: [HttpClientModule, RouterModule],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })

@@ -30,28 +30,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { routes } from '../../app.routes';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-prueba-login',
   standalone: true,
-  imports: [ReactiveFormsModule,
-    CommonModule,
-    RouterModule,
-    HttpClientModule,
-    MatPaginatorModule,
-    MatTableModule,
-    MatProgressBarModule,
-    MatStepperModule,
-    MatSelectModule,
-    MatFormFieldModule,
-    MatCheckboxModule,
-    MatSortModule,
-    MatInputModule,
-    MatExpansionModule,
-    MatDialogModule,
-    MatGridListModule,
-    MatCardModule,RouterOutlet],
+  imports: [ReactiveFormsModule, RouterModule, HttpClientModule, MatPaginatorModule, MatTableModule, MatProgressBarModule, MatStepperModule, MatSelectModule, MatFormFieldModule, MatCheckboxModule, MatSortModule, MatInputModule, MatExpansionModule, MatDialogModule, MatGridListModule, MatCardModule, RouterOutlet],
   templateUrl: './prueba-login.component.html',
   styleUrls: ['./prueba-login.component.css'],
   animations: [

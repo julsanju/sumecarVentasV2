@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Productos } from '../../Interfaces/productos';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -22,23 +22,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-dialog-overview',
   standalone: true,
-  imports : [CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    CommonModule,
-    MatPaginatorModule,
-    MatTableModule,
-    MatProgressBarModule,
-    MatStepperModule,
-    MatSelectModule,
-    MatFormFieldModule,
-    MatCheckboxModule,
-    MatSortModule,
-    MatInputModule,
-    MatExpansionModule,
-    MatDialogModule,
-    MatGridListModule,
-    MatCardModule, RouterOutlet],
+  imports: [FormsModule, ReactiveFormsModule, MatPaginatorModule, MatTableModule, MatProgressBarModule, MatStepperModule, MatSelectModule, MatFormFieldModule, MatCheckboxModule, MatSortModule, MatInputModule, MatExpansionModule, MatDialogModule, MatGridListModule, MatCardModule, RouterOutlet],
   templateUrl: './dialog-overview.component.html',
   styleUrls: ['./dialog-overview.component.css']
 })

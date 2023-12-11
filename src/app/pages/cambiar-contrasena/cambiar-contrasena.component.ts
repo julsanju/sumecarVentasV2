@@ -23,7 +23,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
@@ -32,7 +32,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   imports: [
     HttpClientModule,
     RouterModule,
-    CommonModule,
     MatPaginatorModule,
     ReactiveFormsModule,
     FormsModule,
@@ -47,7 +46,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatExpansionModule,
     MatDialogModule,
     MatGridListModule,
-    MatCardModule,RouterOutlet],
+    MatCardModule,
+    RouterOutlet
+],
   templateUrl: './cambiar-contrasena.component.html',
   styleUrls: ['./cambiar-contrasena.component.css']
 })

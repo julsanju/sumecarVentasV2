@@ -36,15 +36,6 @@ export const routes: Routes = [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' }, // Redirige a 'register' por defecto en '/menu'
       { path: 'prueba-login', component: PruebaLoginComponent },
       { path : 'dashboard', component: DashboardComponent},
-      { path: 'register', component: RegisterSalesComponent }, // Componente RegisterSalesComponent se carga en la vista principal de '/menu'
-      { path: 'cambiar-contrasena', component: CambiarContrasenaComponent }, // Componente CambiarContrasenaComponent se carga en la vista principal de '/menu'
-      { path: 'productos', component: ProductosComponent },
-      { path: 'view-products', component: VisualizarProductosComponent},
-      { path: 'add-information', component: AddInformationComponent},
-      { path : 'confirmed-products', component : ConfirmedProductsComponent },
-      { path : 'finished-products', component : FinishedProductsComponent },
-      { path : 'view-peticiones',component : ViewPeticionesComponent},
-      {path : 'historial-peticiones',component : HistorialPeticionesComponent},
       //{ path: '**', component: Page404Component },
     ],
   },
