@@ -11,11 +11,12 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzInputModule } from 'ng-zorro-antd/input'
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports : [ RouterModule, ModuloMenuModule,
+  imports : [ HttpClientModule,RouterModule, ModuloMenuModule,
     NzLayoutModule,
     NzMenuModule,
     NzBreadCrumbModule,

@@ -24,11 +24,13 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-cambiar-contrasena',
   standalone: true,
   imports: [
+    HttpClientModule,
     RouterModule,
     CommonModule,
     MatPaginatorModule,

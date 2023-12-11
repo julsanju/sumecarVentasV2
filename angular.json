@@ -16,7 +16,7 @@
             "outputPath": "dist/sumecar-ventasv2",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "sourceMap": true,
+            "sourceMap": false,
             "polyfills": [
               "zone.js"
             ],
@@ -55,7 +55,7 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": false
             }
           },
           "defaultConfiguration": "production"

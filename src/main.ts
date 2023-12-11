@@ -4,7 +4,10 @@ import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 import { routes } from './app/app.routes';
 
-bootstrapApplication(AppComponent, {
+/*bootstrapApplication(AppComponent, {
   ...appConfig,
   providers: [provideHttpClient(withFetch())]
-}).catch((err) => console.error(err));
+}).catch((err) => console.error(err));*/
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
